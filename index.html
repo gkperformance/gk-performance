@@ -597,7 +597,7 @@
       </div>
 
       <div class="fade-in fade-in-delay-1">
-        <form class="form" id="inquiry-form" onsubmit="handleSubmit(event)">
+        <form class="form" id="inquiry-form" action="https://formspree.io/f/xaqleord" method="POST">
           <div class="form-row">
             <div class="form-group">
               <label for="fname">Fornafn</label>
@@ -710,12 +710,7 @@
   }, { threshold: 0.1 });
   fadeEls.forEach(el => observer.observe(el));
 
-  // Form submit
-  function handleSubmit(e) {
-    e.preventDefault();
-    document.getElementById('inquiry-form').style.display = 'none';
-    document.getElementById('form-success').style.display = 'block';
-  }
+ 
 </script>
 </body>
 </html>
