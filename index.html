@@ -93,18 +93,82 @@
     .credential-sub { font-size: 12px; color: var(--muted); margin-top: 4px; }
     @media (max-width: 768px) { .about-grid { grid-template-columns: 1fr; gap: 60px; } .about-img-badge { right: 0; bottom: -10px; } }
 
-    .testimonials { background: var(--dark2); }
-    .testimonials h2 { font-size: clamp(36px, 4vw, 56px); color: #fff; margin-bottom: 60px; text-align: center; }
-    .testimonials-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
-    .testimonial-card { background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.07); border-top: 3px solid var(--primary); padding: 36px; border-radius: 2px; display: flex; flex-direction: column; gap: 20px; }
-    .stars { color: var(--primary); font-size: 14px; letter-spacing: 2px; }
-    .testimonial-text { font-size: 14px; font-weight: 300; color: #b8b6a0; line-height: 1.8; font-style: italic; flex: 1; }
-    .testimonial-author { display: flex; align-items: center; gap: 14px; }
-    .testimonial-author img { width: 44px; height: 44px; border-radius: 50%; object-fit: cover; border: 2px solid var(--primary); }
-    .author-name { font-size: 13px; font-weight: 700; color: #fff; }
-    .author-role { font-size: 11px; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: var(--primary); margin-top: 2px; }
-    @media (max-width: 900px) { .testimonials-grid { grid-template-columns: 1fr; } }
+   .testimonials { background: var(--dark2); }
+.testimonials h2 { font-size: clamp(36px, 4vw, 56px); color: #fff; margin-bottom: 60px; text-align: center; }
 
+.testimonials-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.testimonial-card {
+  background: rgba(255,255,255,0.03);
+  border: 1px solid rgba(255,255,255,0.07);
+  border-top: 3px solid var(--primary);
+  padding: 36px;
+  border-radius: 2px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  min-height: 320px;
+}
+
+.stars {
+  color: var(--primary);
+  font-size: 14px;
+  letter-spacing: 2px;
+}
+
+.testimonial-text {
+  font-size: 14px;
+  font-weight: 300;
+  color: #b8b6a0;
+  line-height: 1.8;
+  font-style: italic;
+  flex: 1;
+}
+
+.testimonial-author {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.testimonial-author img {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid var(--primary);
+}
+
+.author-name {
+  font-size: 13px;
+  font-weight: 700;
+  color: #fff;
+}
+
+.author-role {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--primary);
+  margin-top: 2px;
+}
+
+@media (max-width: 900px) {
+  .testimonials-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 640px) {
+  .testimonials-grid {
+    grid-template-columns: 1fr;
+  }
+}
     .contact { background: var(--dark); }
     .contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: start; }
     .contact-info h2 { font-size: clamp(36px, 4vw, 60px); color: #fff; margin-bottom: 20px; }
@@ -314,6 +378,7 @@
   <div class="container">
     <h2 class="fade-in">Umsagnir</h2>
     <div class="testimonials-grid">
+
       <div class="testimonial-card fade-in fade-in-delay-1">
         <div class="stars">★★★★★</div>
         <p class="testimonial-text">„Ég hef æft hjá Gumma í mörg ár og hans þjálfun á stóran þátt í mínum framförum sem íþróttamaður. Hún er markviss sökum gríðarlegrar þekkingar hans á líkamanum, allt frá anatomíu að þjálffræði. Æfingarnar tikka í öll boxin, hvort sem það er úthald, styrkur, beinheilsa eða endurheimt."</p>
@@ -325,6 +390,7 @@
           </div>
         </div>
       </div>
+
       <div class="testimonial-card fade-in fade-in-delay-2">
         <div class="stars">★★★★★</div>
         <p class="testimonial-text">„Kraftaþjálfunin breytti öllu. Hopphæðin mín fór upp um 10 cm á einni frítíð. Mæli eindregið með þjálfun hjá GK Performance fyrir alla alvarlega íþróttamenn."</p>
@@ -336,6 +402,7 @@
           </div>
         </div>
       </div>
+
       <div class="testimonial-card fade-in fade-in-delay-3">
         <div class="stars">★★★★★</div>
         <p class="testimonial-text">„Við þjálfum ekki bara hart — við þjálfum skynsamlega. Online coaching prógramm Guðmundar er það besta sem ég hef prófað. Frábær samskipti og niðurstæður."</p>
@@ -347,6 +414,43 @@
           </div>
         </div>
       </div>
+
+      <div class="testimonial-card fade-in fade-in-delay-1">
+        <div class="stars">★★★★★</div>
+        <p class="testimonial-text">„Ég fann fljótt mikinn mun á styrk, hraða og sprengikrafti eftir að ég byrjaði að æfa hjá GK Performance. Þjálfunin er fagleg, markviss og hefur skilað mér miklum framförum."</p>
+        <div class="testimonial-author">
+          <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?q=80&w=200&auto=format&fit=crop" alt="Elín" referrerpolicy="no-referrer" />
+          <div>
+            <div class="author-name">Elín María</div>
+            <div class="author-role">Knattspyrnukona</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="testimonial-card fade-in fade-in-delay-2">
+        <div class="stars">★★★★★</div>
+        <p class="testimonial-text">„Það sem stendur mest upp úr er hversu vel allt er skipulagt. Ég veit alltaf hvað ég á að gera og af hverju. Ég hef orðið sterkari, hraðari og öruggari í minni íþrótt."</p>
+        <div class="testimonial-author">
+          <img src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?q=80&w=200&auto=format&fit=crop" alt="Jón" referrerpolicy="no-referrer" />
+          <div>
+            <div class="author-name">Jón Már</div>
+            <div class="author-role">Handboltamaður</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="testimonial-card fade-in fade-in-delay-3">
+        <div class="stars">★★★★★</div>
+        <p class="testimonial-text">„Online þjálfunin hefur hentað mér fullkomlega. Ég fæ skýrar leiðbeiningar, góð samskipti og prógramm sem passar inn í mitt líf. Frábær lausn fyrir metnaðarfulla íþróttamenn."</p>
+        <div class="testimonial-author">
+          <img src="https://images.unsplash.com/photo-1488426862026-3ee34a7d66df?q=80&w=200&auto=format&fit=crop" alt="Katrín" referrerpolicy="no-referrer" />
+          <div>
+            <div class="author-name">Katrín Eva</div>
+            <div class="author-role">Sundkona</div>
+          </div>
+        </div>
+      </div>
+
     </div>
   </div>
 </section>
