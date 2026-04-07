@@ -276,16 +276,6 @@
       text-align: center;
     }
 
-    @media (max-width: 768px) {
-      .nav-links {
-        display: none;
-      }
-
-      .hamburger {
-        display: block;
-      }
-    }
-
     .hero {
       position: relative;
       min-height: 96vh;
@@ -445,41 +435,6 @@
       margin-top: 7px;
     }
 
-    @media (max-width: 900px) {
-      .hero {
-        min-height: auto;
-      }
-
-      .hero-content {
-        padding: 78px 0 188px;
-      }
-
-      .hero-stats-inner {
-        width: 100%;
-      }
-
-      .stat {
-        min-width: 0;
-        flex: 1;
-        padding: 18px 12px;
-      }
-    }
-
-    @media (max-width: 640px) {
-      .hero-trust {
-        gap: 10px 14px;
-        font-size: 10px;
-      }
-
-      .hero h1 {
-        font-size: clamp(40px, 12vw, 72px);
-      }
-
-      .hero p {
-        font-size: 17px;
-      }
-    }
-
     .programs {
       background:
         radial-gradient(circle at top right, rgba(244,226,37,0.05), transparent 22%),
@@ -634,12 +589,6 @@
       margin-bottom: 22px;
     }
 
-    @media (max-width: 1024px) {
-      .programs-grid {
-        grid-template-columns: 1fr;
-      }
-    }
-
     .about {
       background: var(--dark);
     }
@@ -705,13 +654,16 @@
       margin-bottom: 26px;
     }
 
-    .about-content p {
+    .about-text {
+      max-width: 620px;
+    }
+
+    .about-text p {
       font-size: 15px;
       font-weight: 300;
       color: #b9b79f;
       line-height: 1.95;
       margin-bottom: 20px;
-      max-width: 620px;
     }
 
     .about-credentials {
@@ -756,24 +708,6 @@
       margin-top: 6px;
       line-height: 1.6;
       padding-left: 10px;
-    }
-
-    @media (max-width: 900px) {
-      .about-grid {
-        grid-template-columns: 1fr;
-        gap: 74px;
-      }
-    }
-
-    @media (max-width: 640px) {
-      .about-credentials {
-        grid-template-columns: 1fr;
-      }
-
-      .about-img-badge {
-        right: 0;
-        bottom: -10px;
-      }
     }
 
     .testimonials {
@@ -913,31 +847,6 @@
       background: var(--primary);
     }
 
-    @media (max-width: 1100px) {
-      .testimonials-layout {
-        grid-template-columns: 1fr;
-      }
-    }
-
-    @media (max-width: 700px) {
-      .testimonial-grid-side {
-        grid-template-columns: 1fr;
-      }
-
-      .testimonial-featured {
-        padding: 34px 28px;
-      }
-
-      .testimonial-card {
-        padding: 28px;
-      }
-
-      .testimonial-featured .testimonial-text {
-        max-width: 100%;
-        font-size: 15px;
-      }
-    }
-
     .contact {
       background: linear-gradient(180deg, var(--dark), #131308);
     }
@@ -978,6 +887,16 @@
       font-size: 14px;
       font-weight: 400;
       color: #d1cfb7;
+    }
+
+    .contact-detail a {
+      color: inherit;
+      text-decoration: none;
+      transition: color 0.2s ease, opacity 0.2s ease;
+    }
+
+    .contact-detail a:hover {
+      color: var(--primary);
     }
 
     .contact-detail-icon {
@@ -1098,23 +1017,6 @@
       margin-top: 20px;
     }
 
-    @media (max-width: 960px) {
-      .contact-grid {
-        grid-template-columns: 1fr;
-        gap: 56px;
-      }
-    }
-
-    @media (max-width: 640px) {
-      .form-row {
-        grid-template-columns: 1fr;
-      }
-
-      .contact-form-panel {
-        padding: 24px;
-      }
-    }
-
     footer {
       background: linear-gradient(180deg, #1d1c0f, #15150b);
       border-top: 1px solid rgba(255,255,255,0.06);
@@ -1161,34 +1063,23 @@
       transition: background 0.2s ease, color 0.2s ease, border-color 0.2s ease, transform 0.2s ease;
     }
 
-    /* Base hover (fallback) */
-.social-btn:hover {
-  transform: translateY(-3px) scale(1.05);
-  background: var(--primary);
-  color: var(--dark);
-  border-color: var(--primary);
-}
+    .social-btn:hover {
+      transform: translateY(-3px) scale(1.05);
+      background: var(--primary);
+      color: var(--dark);
+      border-color: var(--primary);
+    }
 
-/* Facebook hover */
-.social-btn.facebook:hover {
-  background: #1877F2;
-  border-color: #1877F2;
-  color: #fff;
-}
+    .social-btn.facebook:hover {
+      background: #1877F2;
+      border-color: #1877F2;
+      color: #fff;
+    }
 
-/* Instagram hover */
-.social-btn.instagram:hover {
-  background: linear-gradient(
-    135deg,
-    #f58529,
-    #dd2a7b,
-    #8134af,
-    #515bd4
-  );
-  border-color: transparent;
-  color: #fff;
-}
-}
+    .social-btn.instagram:hover {
+      background: linear-gradient(135deg, #f58529, #dd2a7b, #8134af, #515bd4);
+      border-color: transparent;
+      color: #fff;
     }
 
     .footer-col h4 {
@@ -1215,17 +1106,14 @@
       color: #9f9d84;
       transition: color 0.2s ease;
     }
+
     .footer-col li a {
-  color: inherit;
-  text-decoration: none;
-  transition: color 0.2s ease, opacity 0.2s ease;
-}
+      color: inherit;
+      text-decoration: none;
+      transition: color 0.2s ease, opacity 0.2s ease;
+    }
 
-.footer-col li a:hover {
-  color: var(--primary);
-}
-
-    .footer-col ul li a:hover {
+    .footer-col li a:hover {
       color: var(--primary);
     }
 
@@ -1257,18 +1145,6 @@
       color: rgba(255,255,255,0.18);
     }
 
-    @media (max-width: 768px) {
-      .footer-grid {
-        grid-template-columns: 1fr;
-        gap: 42px;
-      }
-
-      .footer-bottom {
-        justify-content: center;
-        text-align: center;
-      }
-    }
-
     .fade-in {
       opacity: 0;
       transform: translateY(28px);
@@ -1290,6 +1166,341 @@
 
     .fade-in-delay-3 {
       transition-delay: 0.3s;
+    }
+
+    @media (max-width: 1100px) {
+      .testimonials-layout {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media (max-width: 1024px) {
+      .programs-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media (max-width: 960px) {
+      .contact-grid {
+        grid-template-columns: 1fr;
+        gap: 56px;
+      }
+    }
+
+    @media (max-width: 900px) {
+      .hero {
+        min-height: auto;
+      }
+
+      .hero-content {
+        padding: 78px 0 188px;
+      }
+
+      .hero-stats-inner {
+        width: 100%;
+      }
+
+      .stat {
+        min-width: 0;
+        flex: 1;
+        padding: 18px 12px;
+      }
+
+      .about-grid {
+        grid-template-columns: 1fr;
+        gap: 74px;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .container {
+        padding: 0 18px;
+      }
+
+      .nav-links {
+        display: none;
+      }
+
+      .hamburger {
+        display: block;
+      }
+
+      .nav-logo {
+        font-size: 16px;
+      }
+
+      .nav-inner {
+        height: 72px;
+      }
+
+      .section {
+        padding: 88px 0;
+      }
+
+      .section-heading {
+        margin-bottom: 42px;
+      }
+
+      .section-title {
+        font-size: clamp(30px, 9vw, 42px);
+        line-height: 1.02;
+        margin-bottom: 14px;
+      }
+
+      .section-subtitle {
+        font-size: 15px;
+        line-height: 1.75;
+      }
+
+      .tag {
+        font-size: 10px;
+        letter-spacing: 0.16em;
+        margin-bottom: 16px;
+      }
+
+      .btn-primary,
+      .btn-outline {
+        min-height: 52px;
+        padding: 15px 20px;
+        font-size: 11px;
+        letter-spacing: 0.12em;
+      }
+
+      .hero {
+        min-height: auto;
+      }
+
+      .hero-content {
+        padding: 56px 0 150px;
+        max-width: 100%;
+      }
+
+      .hero h1 {
+        font-size: clamp(38px, 12vw, 58px);
+        line-height: 0.95;
+        margin-bottom: 18px;
+      }
+
+      .hero p {
+        font-size: 16px;
+        line-height: 1.7;
+        margin-bottom: 28px;
+        max-width: 100%;
+      }
+
+      .hero-btns {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 12px;
+      }
+
+      .hero-btns a {
+        width: 100%;
+      }
+
+      .hero-trust {
+        gap: 8px 12px;
+        font-size: 10px;
+        line-height: 1.4;
+        margin-top: 8px;
+      }
+
+      .hero-stats {
+        position: relative;
+        bottom: auto;
+        margin-top: -110px;
+        padding-bottom: 24px;
+      }
+
+      .hero-stats-inner {
+        width: 100%;
+        display: grid;
+        grid-template-columns: 1fr;
+        margin-left: 0;
+      }
+
+      .stat {
+        border-right: none;
+        border-bottom: 1px solid rgba(255,255,255,0.08);
+        padding: 16px 14px;
+      }
+
+      .stat:last-child {
+        border-bottom: none;
+      }
+
+      .stat-num {
+        font-size: 24px;
+      }
+
+      .program-card-body {
+        padding: 28px 22px 26px;
+      }
+
+      .program-card h3 {
+        font-size: 24px;
+      }
+
+      .program-card p {
+        font-size: 14px;
+        line-height: 1.75;
+      }
+
+      .program-features li {
+        font-size: 11px;
+        line-height: 1.5;
+      }
+
+      .about-grid {
+        grid-template-columns: 1fr;
+        gap: 46px;
+      }
+
+      .about-content h2 {
+        font-size: clamp(30px, 10vw, 46px);
+        line-height: 0.95;
+        margin-bottom: 20px;
+      }
+
+      .about-text {
+        max-width: 100%;
+      }
+
+      .about-text p {
+        font-size: 15px;
+        line-height: 1.85;
+        margin-bottom: 16px;
+      }
+
+      .about-img-accent {
+        width: 90px;
+        height: 90px;
+        inset: -10px auto auto -10px;
+      }
+
+      .about-img-badge {
+        position: static;
+        display: inline-block;
+        margin-top: 16px;
+        padding: 16px 18px;
+        font-size: 11px;
+      }
+
+      .about-credentials {
+        grid-template-columns: 1fr;
+        gap: 14px;
+        margin-top: 30px;
+      }
+
+      .credential {
+        padding: 16px 16px 16px 18px;
+      }
+
+      .testimonial-grid-side {
+        grid-template-columns: 1fr;
+      }
+
+      .testimonial-featured,
+      .testimonial-card {
+        padding: 24px;
+      }
+
+      .testimonial-featured .testimonial-text,
+      .testimonial-card .testimonial-text {
+        font-size: 14px;
+        line-height: 1.8;
+        max-width: 100%;
+      }
+
+      .contact-grid {
+        grid-template-columns: 1fr;
+        gap: 42px;
+      }
+
+      .contact-info h2 {
+        font-size: clamp(30px, 9vw, 42px);
+        margin-bottom: 16px;
+      }
+
+      .contact-info p {
+        font-size: 15px;
+        line-height: 1.8;
+        margin-bottom: 28px;
+      }
+
+      .contact-form-panel {
+        padding: 22px;
+        border-radius: 18px;
+      }
+
+      .form-row {
+        grid-template-columns: 1fr;
+        gap: 14px;
+      }
+
+      .form-group input,
+      .form-group select,
+      .form-group textarea {
+        font-size: 16px;
+      }
+
+      .footer-grid {
+        grid-template-columns: 1fr;
+        gap: 34px;
+      }
+
+      .footer-brand p {
+        max-width: 100%;
+      }
+
+      .footer-bottom {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 8px;
+      }
+    }
+
+    @media (max-width: 700px) {
+      .testimonial-featured {
+        padding: 34px 28px;
+      }
+
+      .testimonial-card {
+        padding: 28px;
+      }
+
+      .testimonial-featured .testimonial-text {
+        max-width: 100%;
+        font-size: 15px;
+      }
+    }
+
+    @media (max-width: 640px) {
+      .hero-trust {
+        gap: 10px 14px;
+        font-size: 10px;
+      }
+
+      .hero h1 {
+        font-size: clamp(40px, 12vw, 72px);
+      }
+
+      .hero p {
+        font-size: 17px;
+      }
+
+      .about-credentials {
+        grid-template-columns: 1fr;
+      }
+
+      .form-row {
+        grid-template-columns: 1fr;
+      }
+
+      .contact-form-panel {
+        padding: 24px;
+      }
     }
   </style>
 </head>
@@ -1339,10 +1550,9 @@
         <h1>GK <span>Performance</span></h1>
         <p>Markviss þjálfun fyrir íþróttafólk sem vill byggja meiri hraða, sprengikraft og styrk með faglegri og metnaðarfullri nálgun.</p>
 
-      <div class="hero-btns">
-  <a href="#programs" class="btn-primary">Skoða þjálfunarleiðir</a>
-  <a href="#contact" class="btn-outline">Hafa samband</a>
-</div>
+        <div class="hero-btns">
+          <a href="#programs" class="btn-primary">Skoða þjálfunarleiðir</a>
+          <a href="#contact" class="btn-outline">Hafa samband</a>
         </div>
 
         <div class="hero-trust">
@@ -1391,7 +1601,7 @@
           <div class="program-card-body">
             <div class="program-label">Hópaþjálfun · 8 vikur</div>
             <h3>TAKEOFF</h3>
-            <p>Prógram sem er hannað til að auka hraða og sprengikraft hjá fótboltafólki. Ef þú vilt verða fljótari á fyrstu metrunum og ná meiri hámarkshraða, þá er þetta prógrammið fyrir þig. </p>
+            <p>Prógram sem er hannað til að auka hraða og sprengikraft hjá fótboltafólki. Ef þú vilt verða fljótari á fyrstu metrunum og ná meiri hámarkshraða, þá er þetta prógrammið fyrir þig.</p>
             <ul class="program-features">
               <li>Hraða- og hoppmælingar</li>
               <li>Sprett- og hoppæfingar</li>
@@ -1460,24 +1670,24 @@
         <div class="about-content">
           <div class="tag">Um mig</div>
           <h2 class="fade-in">Guðmundur<br>Kristjánsson</h2>
-          <p class="fade-in fade-in-delay-1"><div class="about-text">
-  <p>
-    Ég er styrktarþjálfari og fótboltamaður með margra ára reynslu af þjálfun íþróttafólks í ólíkum greinum — allt frá fótbolta og öðrum boltaíþróttum yfir í alpagreinar og langhlaup.
-  </p>
 
-  <p>
-    Ég er núverandi leikmaður hjá Stjörnunni í fótbolta og hef leikið með öllum yngri landsliðum Íslands, ásamt 7 leikjum fyrir A-landsliðið.
-  </p>
+          <div class="about-text fade-in fade-in-delay-1">
+            <p>
+              Ég er styrktarþjálfari og fótboltamaður með margra ára reynslu af þjálfun íþróttafólks í ólíkum greinum — allt frá fótbolta og öðrum boltaíþróttum yfir í alpagreinar og langhlaup.
+            </p>
 
-  <p>
-    Ég spilaði í norsku úrvalsdeildinni með IK Start, þar sem ég var í 6 ár. Þar sá ég hvað markviss styrktar- og hraðaþjálfun getur gert fyrir fótboltafólk og árið 2018 fór ég að hjálpa íþróttafólki með styrktar- og hraðaþjálfun.
-  </p>
+            <p>
+              Ég er núverandi leikmaður hjá Stjörnunni í fótbolta og hef leikið með öllum yngri landsliðum Íslands, ásamt 7 leikjum fyrir A-landsliðið.
+            </p>
 
-  <p>
-    Árið 2020 stofnaði ég Elite Þjálfun ásamt öðrum og hef síðan þá sinnt minni þjálfun þar.
-  </p>
-</div>
-</p>
+            <p>
+              Ég spilaði í norsku úrvalsdeildinni með IK Start, þar sem ég var í 6 ár. Þar sá ég hvað markviss styrktar- og hraðaþjálfun getur gert fyrir fótboltafólk og árið 2018 fór ég að hjálpa íþróttafólki með styrktar- og hraðaþjálfun.
+            </p>
+
+            <p>
+              Árið 2020 stofnaði ég Elite Þjálfun ásamt öðrum og hef síðan þá sinnt minni þjálfun þar.
+            </p>
+          </div>
 
           <div class="about-credentials fade-in fade-in-delay-2">
             <div class="credential">
@@ -1514,8 +1724,7 @@
         <div class="testimonial-featured fade-in">
           <div class="featured-label">Valin umsögn</div>
           <div class="stars" style="margin-top:18px;">★★★★★</div>
-          <p class="testimonial-text">„Við skráðum 15 ára son okkar á námskeið hjá Gumma þar sem hann var meiddur og mátti ekki sparka í bolta né taka 100% spretti. Gummi var með hann í styrktarprógrami og sprettþjálfun í nokkrar vikur og þegar hann mátti byrja aftur að spila sáum við gríðarlegan mun á hraða og styrk strax í fyrsta leik.
- Mæli 100% með Gumma þar sem passað er uppá rétt álag og fylgst með að allar æfingar séu rétt gerðar.“</p>
+          <p class="testimonial-text">„Við skráðum 15 ára son okkar á námskeið hjá Gumma þar sem hann var meiddur og mátti ekki sparka í bolta né taka 100% spretti. Gummi var með hann í styrktarprógrami og sprettþjálfun í nokkrar vikur og þegar hann mátti byrja aftur að spila sáum við gríðarlegan mun á hraða og styrk strax í fyrsta leik. Mæli 100% með Gumma þar sem passað er upp á rétt álag og fylgst með að allar æfingar séu rétt gerðar.“</p>
           <div class="testimonial-author">
             <div class="author-avatar">HR</div>
             <div>
@@ -1540,8 +1749,7 @@
 
           <div class="testimonial-card fade-in fade-in-delay-2">
             <div class="stars">★★★★★</div>
-            <p class="testimonial-text">„Ég mætti alltaf í þjálfun til Gumma í mörg ár þegar ég var heima í „fríi“ til að halda mér í formi. Ég mætti í frábæru formi til baka til liðsins míns og fann góðan mun á styrk, hraða og sprengikrafti. Gummi ýtir vel á eftir manni, með margar góðar æfingar og er mjög faglegur í einu og öllu.
-.“</p>
+            <p class="testimonial-text">„Ég mætti alltaf í þjálfun til Gumma í mörg ár þegar ég var heima í „fríi“ til að halda mér í formi. Ég mætti í frábæru formi til baka til liðsins míns og fann góðan mun á styrk, hraða og sprengikrafti. Gummi ýtir vel á eftir manni, með margar góðar æfingar og er mjög faglegur í einu og öllu.“</p>
             <div class="testimonial-author">
               <div class="author-avatar">GÞ</div>
               <div>
@@ -1553,7 +1761,7 @@
 
           <div class="testimonial-card fade-in fade-in-delay-2">
             <div class="stars">★★★★★</div>
-            <p class="testimonial-text">„Kemur von bráðar!  “</p>
+            <p class="testimonial-text">„Kemur von bráðar!“</p>
             <div class="testimonial-author">
               <div class="author-avatar">EM</div>
               <div>
@@ -1594,7 +1802,7 @@
                   <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.32 9.8a19.79 19.79 0 01-3.07-8.67A2 2 0 012.23 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.91 9.91a16 16 0 006.18 6.18l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/>
                 </svg>
               </div>
-             <a href="tel:8690177">869-0177</a>
+              <a href="tel:8690177">869-0177</a>
             </div>
 
             <div class="contact-detail">
@@ -1662,74 +1870,74 @@
   </section>
 
   <footer>
-  <div class="container">
-    <div class="footer-grid">
+    <div class="container">
+      <div class="footer-grid">
 
-      <div class="footer-brand">
-        <div class="nav-logo">
-          <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor" style="color:var(--primary)">
-            <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/>
-          </svg>
-          GK <span>Performance</span>
+        <div class="footer-brand">
+          <div class="nav-logo">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor" style="color:var(--primary)">
+              <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/>
+            </svg>
+            GK <span>Performance</span>
+          </div>
+
+          <p>Hraða- og styrktarþjálfun fyrir íþróttafólk sem vill ná hámarksárangri með faglegri, markvissri og metnaðarfullri nálgun.</p>
+
+          <div class="footer-social">
+            <a href="http://www.facebook.com/gummikri" class="social-btn facebook" aria-label="Facebook" target="_blank" rel="noopener noreferrer">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/>
+              </svg>
+            </a>
+
+            <a href="http://www.instagram.com/gummikri" class="social-btn instagram" aria-label="Instagram" target="_blank" rel="noopener noreferrer">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
+                <path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z"/>
+                <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/>
+              </svg>
+            </a>
+          </div>
         </div>
 
-        <p>Hraða- og styrktarþjálfun fyrir íþróttafólk sem vill ná hámarksárangri með faglegri, markvissri og metnaðarfullri nálgun.</p>
-
-        <div class="footer-social">
-          <a href="http://www.facebook.com/gummikri" class="social-btn facebook" aria-label="Facebook" target="_blank" rel="noopener noreferrer">
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
-              <path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/>
-            </svg>
-          </a>
-
-          <a href="http://www.instagram.com/gummikri" class="social-btn instagram" aria-label="Instagram" target="_blank" rel="noopener noreferrer">
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-              <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
-              <path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z"/>
-              <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/>
-            </svg>
-          </a>
+        <div class="footer-col">
+          <h4>Flýtileiðir</h4>
+          <ul>
+            <li><a href="#">Heim</a></li>
+            <li><a href="#programs">Þjálfunarleiðir</a></li>
+            <li><a href="#about">Um mig</a></li>
+            <li><a href="#testimonials">Umsagnir</a></li>
+            <li><a href="#contact">Hafa samband</a></li>
+          </ul>
         </div>
+
+        <div class="footer-col">
+          <h4>Hafðu samband</h4>
+          <ul>
+            <li>
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--primary)" stroke-width="2">
+                <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.32 9.8a19.79 19.79 0 01-3.07-8.67A2 2 0 012.23 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.91 9.91a16 16 0 006.18 6.18l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/>
+              </svg>
+              <a href="tel:8690177">869-0177</a>
+            </li>
+            <li>
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--primary)" stroke-width="2">
+                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+                <polyline points="22,6 12,13 2,6"/>
+              </svg>
+              <a href="mailto:gudmundur@gkperformance.is">gudmundur@gkperformance.is</a>
+            </li>
+          </ul>
+        </div>
+
       </div>
 
-      <div class="footer-col">
-        <h4>Flýtileiðir</h4>
-        <ul>
-          <li><a href="#">Heim</a></li>
-          <li><a href="#programs">Þjálfunarleiðir</a></li>
-          <li><a href="#about">Um mig</a></li>
-          <li><a href="#testimonials">Umsagnir</a></li>
-          <li><a href="#contact">Hafa samband</a></li>
-        </ul>
+      <div class="footer-bottom">
+        <p>© 2026 GK Performance. Öll réttindi áskilin.</p>
+        <p class="footer-mini">Built for performance</p>
       </div>
-
-      <div class="footer-col">
-        <h4>Hafðu samband</h4>
-        <ul>
-          <li>
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--primary)" stroke-width="2">
-              <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.32 9.8a19.79 19.79 0 01-3.07-8.67A2 2 0 012.23 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.91 9.91a16 16 0 006.18 6.18l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/>
-            </svg>
-            <a href="tel:8690177">869-0177</a>
-          </li>
-          <li>
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--primary)" stroke-width="2">
-              <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
-              <polyline points="22,6 12,13 2,6"/>
-            </svg>
-            <a href="mailto:gudmundur@gkperformance.is">gudmundur@gkperformance.is</a>
-          </li>
-        </ul>
-      </div>
-
     </div>
-
-    <div class="footer-bottom">
-      <p>© 2026 GK Performance. Öll réttindi áskilin.</p>
-      <p class="footer-mini">Built for performance</p>
-    </div>
-  </div>
-</footer>
+  </footer>
 
   <script>
     function toggleMenu() {
