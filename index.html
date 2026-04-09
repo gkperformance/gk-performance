@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
- <title>GK Performance | Hraða- og styrktarþjálfun fyrir íþróttafólk</title>
-<meta name="description" content="GK Performance býður upp á hraða-og styrktarþjálfun fyrir íþróttafólk sem vill verða hraðara, sterkara og kraftmeira." />
+  <title>GK Performance | Hraða- og styrktarþjálfun fyrir íþróttafólk</title>
+  <meta name="description" content="GK Performance býður upp á hraða-og styrktarþjálfun fyrir íþróttafólk sem vill verða hraðara, sterkara og kraftmeira." />
   <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⚡</text></svg>">
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -757,9 +757,10 @@
 
     .testimonial-grid-side {
       display: grid;
-  grid-template-columns: 1fr;
+      grid-template-columns: 1fr;
       gap: 28px;
-}
+    }
+
     .testimonial-card {
       padding: 32px;
       display: flex;
@@ -996,6 +997,10 @@
       min-height: 140px;
     }
 
+    #goal {
+      min-height: 110px;
+    }
+
     .form-submit {
       margin-top: 8px;
       width: 100%;
@@ -1214,7 +1219,7 @@
 
     @media (max-width: 768px) {
       .container {
-        padding: 0 18px;
+        padding: 0 14px;
       }
 
       .nav-links {
@@ -1234,11 +1239,11 @@
       }
 
       .section {
-        padding: 88px 0;
+        padding: 70px 0;
       }
 
       .section-heading {
-        margin-bottom: 42px;
+        margin-bottom: 28px;
       }
 
       .section-title {
@@ -1264,6 +1269,8 @@
         padding: 15px 20px;
         font-size: 11px;
         letter-spacing: 0.12em;
+        width: 100%;
+        justify-content: center;
       }
 
       .hero {
@@ -1271,27 +1278,27 @@
       }
 
       .hero-content {
-        padding: 56px 0 150px;
+        padding: 40px 0 110px;
         max-width: 100%;
       }
 
       .hero h1 {
-        font-size: clamp(38px, 12vw, 58px);
+        font-size: 42px;
         line-height: 0.95;
         margin-bottom: 18px;
       }
 
       .hero p {
-        font-size: 16px;
+        font-size: 15px;
         line-height: 1.7;
-        margin-bottom: 28px;
+        margin-bottom: 20px;
         max-width: 100%;
       }
 
       .hero-btns {
         flex-direction: column;
         align-items: stretch;
-        gap: 12px;
+        gap: 10px;
       }
 
       .hero-btns a {
@@ -1308,41 +1315,46 @@
       .hero-stats {
         position: relative;
         bottom: auto;
-        margin-top: -110px;
-        padding-bottom: 24px;
+        margin-top: -70px;
+        padding-bottom: 20px;
       }
 
       .hero-stats-inner {
         width: 100%;
         display: grid;
-        grid-template-columns: 1fr;
+        grid-template-columns: repeat(3, 1fr);
         margin-left: 0;
       }
 
       .stat {
-        border-right: none;
-        border-bottom: 1px solid rgba(255,255,255,0.08);
-        padding: 16px 14px;
+        min-width: 0;
+        border-right: 1px solid rgba(255,255,255,0.08);
+        border-bottom: none;
+        padding: 14px 6px;
       }
 
       .stat:last-child {
-        border-bottom: none;
+        border-right: none;
       }
 
       .stat-num {
-        font-size: 24px;
+        font-size: 20px;
+      }
+
+      .stat-label {
+        font-size: 9px;
       }
 
       .program-card-body {
-        padding: 28px 22px 26px;
+        padding: 22px 18px;
       }
 
       .program-card h3 {
-        font-size: 24px;
+        font-size: 20px;
       }
 
       .program-card p {
-        font-size: 14px;
+        font-size: 13px;
         line-height: 1.75;
       }
 
@@ -1367,8 +1379,8 @@
       }
 
       .about-text p {
-        font-size: 15px;
-        line-height: 1.85;
+        font-size: 14px;
+        line-height: 1.8;
         margin-bottom: 16px;
       }
 
@@ -1400,9 +1412,12 @@
         grid-template-columns: 1fr;
       }
 
-      .testimonial-featured,
+      .testimonial-featured {
+        padding: 26px;
+      }
+
       .testimonial-card {
-        padding: 24px;
+        padding: 22px;
       }
 
       .testimonial-featured .testimonial-text,
@@ -1433,15 +1448,24 @@
         border-radius: 18px;
       }
 
+      .form {
+        gap: 12px;
+      }
+
       .form-row {
         grid-template-columns: 1fr;
         gap: 14px;
+      }
+
+      .form-group {
+        gap: 6px;
       }
 
       .form-group input,
       .form-group select,
       .form-group textarea {
         font-size: 16px;
+        padding: 14px;
       }
 
       .footer-grid {
@@ -1463,11 +1487,11 @@
 
     @media (max-width: 700px) {
       .testimonial-featured {
-        padding: 34px 28px;
+        padding: 28px 24px;
       }
 
       .testimonial-card {
-        padding: 28px;
+        padding: 24px;
       }
 
       .testimonial-featured .testimonial-text {
@@ -1483,11 +1507,11 @@
       }
 
       .hero h1 {
-        font-size: clamp(40px, 12vw, 72px);
+        font-size: 40px;
       }
 
       .hero p {
-        font-size: 17px;
+        font-size: 16px;
       }
 
       .about-credentials {
@@ -1499,7 +1523,7 @@
       }
 
       .contact-form-panel {
-        padding: 24px;
+        padding: 20px;
       }
     }
   </style>
@@ -1797,82 +1821,80 @@
           <div class="contact-form-panel">
             <form class="form" id="inquiry-form" action="https://formspree.io/f/xaqleord" method="POST">
 
-  <div class="form-row">
-    <div class="form-group">
-      <label for="fname">Fornafn</label>
-      <input type="text" id="fname" name="fornafn" placeholder="Jón" required />
-    </div>
-    <div class="form-group">
-      <label for="lname">Eftirnafn</label>
-      <input type="text" id="lname" name="eftirnafn" placeholder="Jónsson" required />
-    </div>
-  </div>
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="fname">Fornafn</label>
+                  <input type="text" id="fname" name="fornafn" placeholder="Jón" required />
+                </div>
+                <div class="form-group">
+                  <label for="lname">Eftirnafn</label>
+                  <input type="text" id="lname" name="eftirnafn" placeholder="Jónsson" required />
+                </div>
+              </div>
 
-  <div class="form-group">
-    <label for="email">Netfang</label>
-    <input type="email" id="email" name="netfang" placeholder="jon@example.is" required />
-  </div>
+              <div class="form-group">
+                <label for="email">Netfang</label>
+                <input type="email" id="email" name="netfang" placeholder="jon@example.is" required />
+              </div>
 
-  <div class="form-group">
-    <label for="phone">Símanúmer</label>
-    <input type="tel" id="phone" name="simi" placeholder="000-0000" />
-  </div>
+              <div class="form-group">
+                <label for="phone">Símanúmer</label>
+                <input type="tel" id="phone" name="simi" placeholder="000-0000" />
+              </div>
 
-  <!-- NEW: GOAL -->
-<div class="form-group">
-  <label for="goal">Markmið</label>
-  <textarea id="goal" name="markmid" placeholder="Hver eru markmiðin þín? (t.d. auka hraða, komast í byrjunarlið, bæta styrk o.s.frv.)" required></textarea>
-</div>
+              <div class="form-group">
+                <label for="goal">Markmið</label>
+                <textarea id="goal" name="markmid" placeholder="Hver eru markmiðin þín? (t.d. auka hraða, komast í byrjunarlið, bæta styrk o.s.frv.)" required></textarea>
+              </div>
 
-  <div class="form-group">
-  <label for="sport">Hvaða íþrótt stundar þú?</label>
-  <input type="text" id="sport" name="ithrott" placeholder="t.d. fótbolti" required />
-</div>
+              <div class="form-group">
+                <label for="sport">Hvaða íþrótt stundar þú?</label>
+                <input type="text" id="sport" name="ithrott" placeholder="t.d. fótbolti" required />
+              </div>
 
-  <div class="form-group">
-  <label for="age">Aldur</label>
-  <input type="number" id="age" name="aldur" placeholder="t.d. 18" min="10" max="50" required />
-</div>
+              <div class="form-group">
+                <label for="age">Aldur</label>
+                <input type="number" id="age" name="aldur" placeholder="t.d. 18" min="10" max="50" required />
+              </div>
 
-  <div class="form-group">
-  <label for="team">Núverandi lið / level</label>
-  <input type="text" id="team" name="lid_level" placeholder="t.d. 2. flokkur KR / meistaraflokkur / áhugamaður" />
-</div>
+              <div class="form-group">
+                <label for="team">Núverandi lið / level</label>
+                <input type="text" id="team" name="lid_level" placeholder="t.d. 2. flokkur KR / meistaraflokkur / áhugamaður" />
+              </div>
 
-  <div class="form-group">
-  <label for="experience">Hefur þú mikla reynslu af styrktarþjálfun?</label>
-  <select id="experience" name="reynsla" required>
-    <option value="" disabled selected>Veldu...</option>
-    <option value="yes">Já</option>
-    <option value="no">Nei</option>
-  </select>
-</div>
+              <div class="form-group">
+                <label for="experience">Hefur þú mikla reynslu af styrktarþjálfun?</label>
+                <select id="experience" name="reynsla" required>
+                  <option value="" disabled selected>Veldu...</option>
+                  <option value="yes">Já</option>
+                  <option value="no">Nei</option>
+                </select>
+              </div>
 
-  <div class="form-group">
-    <label for="program">Prógram</label>
-    <select id="program" name="program" required>
-      <option value="" disabled selected>Veldu prógram...</option>
-      <option value="takeoff">TAKEOFF – Hraða- og snerpuprógram</option>
-      <option value="online">Online þjálfun</option>
-      <option value="stadar">Staðarþjálfun</option>
-      <option value="other">Annað / Spurning</option>
-    </select>
-  </div>
+              <div class="form-group">
+                <label for="program">Prógram</label>
+                <select id="program" name="program" required>
+                  <option value="" disabled selected>Veldu prógram...</option>
+                  <option value="takeoff">TAKEOFF – Hraða- og snerpuprógram</option>
+                  <option value="online">Online þjálfun</option>
+                  <option value="stadar">Staðarþjálfun</option>
+                  <option value="other">Annað / Spurning</option>
+                </select>
+              </div>
 
-  <div class="form-group">
-    <label for="message">Skilaboð</label>
-    <textarea id="message" name="skilabod" placeholder="Segðu mér frá þér og markmiðum þínum..."></textarea>
-  </div>
+              <div class="form-group">
+                <label for="message">Skilaboð</label>
+                <textarea id="message" name="skilabod" placeholder="Segðu mér meira um stöðuna þína eða ef þú hefur einhverjar spurningar..."></textarea>
+              </div>
 
-  <button type="submit" class="btn-primary form-submit">
-    Sækja um þjálfun
-  </button>
+              <button type="submit" class="btn-primary form-submit">
+                Sækja um þjálfun
+              </button>
+            </form>
 
-</form>
-
-<div class="form-success" id="form-success">
-  ✓ Takk! Ég mun hafa samband við þig innan 24 klst.
-</div>
+            <div class="form-success" id="form-success">
+              ✓ Takk! Ég mun hafa samband við þig innan 24 klst.
+            </div>
           </div>
         </div>
       </div>
@@ -1949,53 +1971,51 @@
     </div>
   </footer>
 
- <script>
-function toggleMenu() {
-  const menu = document.getElementById('mobile-menu');
-  menu.classList.toggle('open');
-}
-
-function closeMenu() {
-  document.getElementById('mobile-menu').classList.remove('open');
-}
-
-// Fade-in animation
-const fadeEls = document.querySelectorAll('.fade-in');
-const observer = new IntersectionObserver((entries) => {
-  entries.forEach(entry => {
-    if (entry.isIntersecting) {
-      entry.target.classList.add('visible');
+  <script>
+    function toggleMenu() {
+      const menu = document.getElementById('mobile-menu');
+      menu.classList.toggle('open');
     }
-  });
-}, { threshold: 0.1 });
 
-fadeEls.forEach(el => observer.observe(el));
-
-// ✅ Formspree AJAX submit (no reload)
-const form = document.getElementById("inquiry-form");
-const success = document.getElementById("form-success");
-
-form.addEventListener("submit", async function(e) {
-  e.preventDefault();
-
-  const data = new FormData(form);
-
-  const response = await fetch(form.action, {
-    method: form.method,
-    body: data,
-    headers: {
-      'Accept': 'application/json'
+    function closeMenu() {
+      document.getElementById('mobile-menu').classList.remove('open');
     }
-  });
 
-  if (response.ok) {
-    form.style.display = "none";
-    success.style.display = "block";
-  } else {
-    alert("Villa kom upp. Reyndu aftur.");
-  }
-});
-</script>
+    const fadeEls = document.querySelectorAll('.fade-in');
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        }
+      });
+    }, { threshold: 0.1 });
+
+    fadeEls.forEach(el => observer.observe(el));
+
+    const form = document.getElementById("inquiry-form");
+    const success = document.getElementById("form-success");
+
+    form.addEventListener("submit", async function(e) {
+      e.preventDefault();
+
+      const data = new FormData(form);
+
+      const response = await fetch(form.action, {
+        method: form.method,
+        body: data,
+        headers: {
+          'Accept': 'application/json'
+        }
+      });
+
+      if (response.ok) {
+        form.style.display = "none";
+        success.style.display = "block";
+      } else {
+        alert("Villa kom upp. Reyndu aftur.");
+      }
+    });
+  </script>
 
 </body>
 </html>
