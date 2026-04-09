@@ -1822,25 +1822,36 @@
   <div class="form-group">
     <label for="goal">Markmið</label>
     <select id="goal" name="markmid" required>
-      <option value="" disabled selected>Veldu markmið...</option>
-      <option value="speed">Auka hraða</option>
-      <option value="strength">Auka styrk</option>
-      <option value="performance">Bæta frammistöðu</option>
-      <option value="return">Koma til baka eftir meiðsli</option>
+   <div class="form-group">
+  <label for="goal">Markmið</label>
+  <textarea id="goal" name="markmid" placeholder="Hver eru markmiðin þín? (t.d. auka hraða, komast í byrjunarlið, bæta styrk o.s.frv.)" required></textarea>
+</div>
     </select>
   </div>
 
-  <!-- NEW: LEVEL -->
   <div class="form-group">
-    <label for="level">Stig</label>
-    <select id="level" name="level">
-      <option value="">Veldu...</option>
-      <option>Unglingur (13–18)</option>
-      <option>Áhugamaður</option>
-      <option>Semi-pro</option>
-      <option>Atvinnumaður</option>
-    </select>
-  </div>
+  <label for="sport">Hvaða íþrótt stundar þú?</label>
+  <input type="text" id="sport" name="ithrott" placeholder="t.d. fótbolti" required />
+</div>
+
+  <div class="form-group">
+  <label for="age">Aldur</label>
+  <input type="number" id="age" name="aldur" placeholder="t.d. 18" min="10" max="50" required />
+</div>
+
+  <div class="form-group">
+  <label for="team">Núverandi lið / level</label>
+  <input type="text" id="team" name="lid_level" placeholder="t.d. 2. flokkur KR / meistaraflokkur / áhugamaður" />
+</div>
+
+  <div class="form-group">
+  <label for="experience">Hefur þú mikla reynslu af styrktarþjálfun?</label>
+  <select id="experience" name="reynsla" required>
+    <option value="" disabled selected>Veldu...</option>
+    <option value="yes">Já</option>
+    <option value="no">Nei</option>
+  </select>
+</div>
 
   <div class="form-group">
     <label for="program">Prógram</label>
